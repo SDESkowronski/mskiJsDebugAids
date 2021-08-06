@@ -434,10 +434,64 @@
 		},
 		{
 			"name": "DND Set",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment'); \r",
+							"pm.collectionVariables.set('oneMinuteFromNowTime', moment().add(1, 'minute').format(\"YYYY-MM-DDTHH:mm:ss.SSSZ\")); \r",
+							"console.log(pm.collectionVariables.get('oneMinuteFromNowTime'))\r",
+							"//2021-03-16T20:58:00.000Z\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
-				"method": "GET",
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BearerToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"operationName\": \"PauseNotificationSetting\",\r\n    \"variables\": {\r\n        \"setting\": {\r\n            \"paused\": true, \r\n            \"endTimeUtc\": \"{{oneMinuteFromNowTime}}\"\r\n        }\r\n    },\r\n\r\n    \"query\": \"mutation PauseNotificationSetting($setting: ToastNotificationSettingInput!) { pauseToastNotifications(setting: $setting) { paused endTimeUtc __typename }}\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://{{Environment}}.scorpion.co/platform/nhub/graphql?operationName=PauseNotificationSetting",
+					"protocol": "https",
+					"host": [
+						"{{Environment}}",
+						"scorpion",
+						"co"
+					],
+					"path": [
+						"platform",
+						"nhub",
+						"graphql"
+					],
+					"query": [
+						{
+							"key": "operationName",
+							"value": "PauseNotificationSetting"
+						}
+					]
+				}
 			},
 			"response": []
 		}
