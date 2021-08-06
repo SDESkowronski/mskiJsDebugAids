@@ -1,0 +1,471 @@
+{
+	"info": {
+		"_postman_id": "31c5b887-3a4f-4a11-8bc3-cffdbdfa7ede",
+		"name": "Notifications",
+		"description": "- Environment: Integration - 1963a308-0a2f-46dd-87fa-f69aea7b4bc0\n- Environment: Dev - 102bc7a1-3724-4e10-a5d8-8a40286e6be4\n- User: xesx@test.scorpdev.com\n- Password: @Scorpion1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Send Notification Missing Listing Association",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment'); \r",
+							"pm.collectionVariables.set('currentTime', moment().format(\"YYYY-MM-DDTHH:mm:ss.SSSZ\")); \r",
+							"console.log(pm.collectionVariables.get('currentTime'))\r",
+							"//2021-03-16T20:58:00.000Z\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key C8593E71-41C9-45B5-BF71-66921CB8BFE0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"referenceId\": \"mski7\",\r\n        \"clientGuid\": \"eb74ebab-6878-0abd-09d2-b1e8344fe151\",\r\n        \"clientLocationId\": 0,\r\n        \"appName\": \"listings\",\r\n        \"eventName\": \"missing-listing-association\",\r\n        \"thresholdValue\": 0,\r\n        \"occurrenceTime\": \"{{currentTime}}\",\r\n        \"targetUsers\": [\r\n            \"19a9a334-456f-4373-b8a3-ce9cf969a74a\",\r\n            \"102bc7a1-3724-4e10-a5d8-8a40286e6be4\"\r\n            ]\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "https://{{Environment}}.scorpion.co/platform/slot01/nhub/v1/api/event/event-triggers",
+					"protocol": "https",
+					"host": [
+						"{{Environment}}",
+						"scorpion",
+						"co"
+					],
+					"path": [
+						"platform",
+						"slot01",
+						"nhub",
+						"v1",
+						"api",
+						"event",
+						"event-triggers"
+					]
+				},
+				"description": "https://dev.azure.com/UberDev/Platform/_wiki/wikis/Platform.wiki/147/NHub"
+			},
+			"response": []
+		},
+		{
+			"name": "Send Notification Google MyBusiness Authorization",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment'); \r",
+							"pm.collectionVariables.set('currentTime', moment().format(\"YYYY-MM-DDTHH:mm:ss.SSSZ\")); \r",
+							"console.log(pm.collectionVariables.get('currentTime'))\r",
+							"//2021-03-16T20:58:00.000Z\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key C8593E71-41C9-45B5-BF71-66921CB8BFE0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"referenceId\": \"mski7\",\r\n        \"clientGuid\": \"eb74ebab-6878-0abd-09d2-b1e8344fe151\",\r\n        \"clientLocationId\": 0,\r\n        \"appName\": \"listings\",\r\n        \"eventName\": \"gmb-authorization\",\r\n        \"thresholdValue\": 0,\r\n        \"occurrenceTime\": \"{{currentTime}}\",\r\n        \"targetUsers\": [\r\n            \"19a9a334-456f-4373-b8a3-ce9cf969a74a\"\r\n            ]\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "https://{{Environment}}.scorpion.co/platform/slot01/nhub/v1/api/event/event-triggers",
+					"protocol": "https",
+					"host": [
+						"{{Environment}}",
+						"scorpion",
+						"co"
+					],
+					"path": [
+						"platform",
+						"slot01",
+						"nhub",
+						"v1",
+						"api",
+						"event",
+						"event-triggers"
+					]
+				},
+				"description": "https://dev.azure.com/UberDev/Platform/_wiki/wikis/Platform.wiki/147/NHub"
+			},
+			"response": []
+		},
+		{
+			"name": "Send Notification New Lead Arrival",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment'); \r",
+							"pm.collectionVariables.set('currentTime', moment().format(\"YYYY-MM-DDTHH:mm:ss.SSSZ\")); \r",
+							"console.log(pm.collectionVariables.get('currentTime'))\r",
+							"//2021-03-16T20:58:00.000Z\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key 3F55AAB9-D2C8-432C-B406-103FB377B029",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"referenceId\": \"mski7\",\r\n        \"clientGuid\": \"eb74ebab-6878-0abd-09d2-b1e8344fe151\",\r\n        \"clientLocationId\": 0,\r\n        \"entityType\": \"leads\",\r\n        \"entityId\": \"9e533b13-b139-cf19-247c-89d2decb7a14\",\r\n        \"appName\": \"leads\",\r\n        \"eventName\": \"new-lead-arrival\",\r\n        \"thresholdValue\": 0,\r\n        \"occurrenceTime\": \"{{currentTime}}\",\r\n        \"targetUsers\": [\r\n            \"19a9a334-456f-4373-b8a3-ce9cf969a74a\"\r\n            ]\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "https://{{Environment}}.scorpion.co/platform/nhub/v1/api/event/event-triggers",
+					"protocol": "https",
+					"host": [
+						"{{Environment}}",
+						"scorpion",
+						"co"
+					],
+					"path": [
+						"platform",
+						"nhub",
+						"v1",
+						"api",
+						"event",
+						"event-triggers"
+					]
+				},
+				"description": "https://dev.azure.com/UberDev/Platform/_wiki/wikis/Platform.wiki/147/NHub"
+			},
+			"response": []
+		},
+		{
+			"name": "Send Notification Lead Upcoming Follow Up",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment'); \r",
+							"pm.collectionVariables.set('currentTime', moment().format(\"YYYY-MM-DDTHH:mm:ss.SSSZ\")); \r",
+							"console.log(pm.collectionVariables.get('currentTime'))\r",
+							"//2021-03-16T20:58:00.000Z\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key C8593E71-41C9-45B5-BF71-66921CB8BFE0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"referenceId\": \"mski7\",\r\n        \"clientGuid\": \"eb74ebab-6878-0abd-09d2-b1e8344fe151\",\r\n        \"clientLocationId\": 0,\r\n        \"entityType\": \"leads\",\r\n        \"entityId\": \"9e533b13-b139-cf19-247c-89d2decb7a14\",\r\n        \"appName\": \"leads\",\r\n        \"eventName\": \"upcoming-followup\",\r\n        \"thresholdValue\": 0,\r\n        \"tokens\": {\r\n            \"lead-name\": \"Joe Shmo4\"\r\n        },  \r\n        \"occurrenceTime\": \"{{currentTime}}\",\r\n        \"targetUsers\": [\r\n            \"19a9a334-456f-4373-b8a3-ce9cf969a74a\",\r\n            \"102bc7a1-3724-4e10-a5d8-8a40286e6be4\"\r\n            ]\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "https://{{Environment}}.scorpion.co/platform/slot01/nhub/v1/api/event/event-triggers",
+					"protocol": "https",
+					"host": [
+						"{{Environment}}",
+						"scorpion",
+						"co"
+					],
+					"path": [
+						"platform",
+						"slot01",
+						"nhub",
+						"v1",
+						"api",
+						"event",
+						"event-triggers"
+					]
+				},
+				"description": "https://dev.azure.com/UberDev/Platform/_wiki/wikis/Platform.wiki/147/NHub"
+			},
+			"response": []
+		},
+		{
+			"name": "Send Notification Positive Reviews",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment'); \r",
+							"pm.collectionVariables.set('currentTime', moment().format(\"YYYY-MM-DDTHH:mm:ss.SSSZ\")); \r",
+							"console.log(pm.collectionVariables.get('currentTime'))\r",
+							"//2021-03-16T20:58:00.000Z\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key C8593E71-41C9-45B5-BF71-66921CB8BFE0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"referenceId\": \"mski7\",\r\n        \"clientGuid\": \"eb74ebab-6878-0abd-09d2-b1e8344fe151\",\r\n        \"clientLocationId\": 0,\r\n        \"appName\": \"reviews-reputation\",\r\n        \"eventName\": \"positive-reviews\",\r\n        \"thresholdValue\": 0,\r\n        \"tokens\": {\r\n            \"review-count\": \"10\",\r\n            \"day-of-week\": \"Tuesday\"\r\n        },  \r\n        \"occurrenceTime\": \"{{currentTime}}\",\r\n        \"targetUsers\": [\r\n            \"19a9a334-456f-4373-b8a3-ce9cf969a74a\",\r\n            \"102bc7a1-3724-4e10-a5d8-8a40286e6be4\"\r\n            ]\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "https://{{Environment}}.scorpion.co/platform/slot01/nhub/v1/api/event/event-triggers",
+					"protocol": "https",
+					"host": [
+						"{{Environment}}",
+						"scorpion",
+						"co"
+					],
+					"path": [
+						"platform",
+						"slot01",
+						"nhub",
+						"v1",
+						"api",
+						"event",
+						"event-triggers"
+					]
+				},
+				"description": "https://dev.azure.com/UberDev/Platform/_wiki/wikis/Platform.wiki/147/NHub"
+			},
+			"response": []
+		},
+		{
+			"name": "Send Notification Chat Existing Task Msg",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment'); \r",
+							"pm.collectionVariables.set('currentTime', moment().format(\"YYYY-MM-DDTHH:mm:ss.SSSZ\")); \r",
+							"console.log(pm.collectionVariables.get('currentTime'))\r",
+							"//2021-03-16T20:58:00.000Z\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key C8593E71-41C9-45B5-BF71-66921CB8BFE0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"referenceId\": \"mski7\",\r\n        \"clientGuid\": \"eb74ebab-6878-0abd-09d2-b1e8344fe151\",\r\n        \"clientLocationId\": 0,\r\n        \"appName\": \"comms-chat\",\r\n        \"eventName\": \"existing-task-message\",\r\n        \"thresholdValue\": 0,\r\n        \"tokens\": {\r\n            \"customer-name\": \"Ozzy Oswald\"\r\n        },  \r\n        \"occurrenceTime\": \"{{currentTime}}\",\r\n        \"targetUsers\": [\r\n            \"19a9a334-456f-4373-b8a3-ce9cf969a74a\",\r\n            \"102bc7a1-3724-4e10-a5d8-8a40286e6be4\"\r\n            ]\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "https://{{Environment}}.scorpion.co/platform/slot01/nhub/v1/api/event/event-triggers",
+					"protocol": "https",
+					"host": [
+						"{{Environment}}",
+						"scorpion",
+						"co"
+					],
+					"path": [
+						"platform",
+						"slot01",
+						"nhub",
+						"v1",
+						"api",
+						"event",
+						"event-triggers"
+					]
+				},
+				"description": "https://dev.azure.com/UberDev/Platform/_wiki/wikis/Platform.wiki/147/NHub"
+			},
+			"response": []
+		},
+		{
+			"name": "Send Notification Chat New Task",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var moment = require('moment'); \r",
+							"pm.collectionVariables.set('currentTime', moment().format(\"YYYY-MM-DDTHH:mm:ss.SSSZ\")); \r",
+							"console.log(pm.collectionVariables.get('currentTime'))\r",
+							"//2021-03-16T20:58:00.000Z\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "api-key C8593E71-41C9-45B5-BF71-66921CB8BFE0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"referenceId\": \"mski7\",\r\n        \"clientGuid\": \"eb74ebab-6878-0abd-09d2-b1e8344fe151\",\r\n        \"clientLocationId\": 0,\r\n        \"appName\": \"comms-chat\",\r\n        \"eventName\": \"new-task\",\r\n        \"thresholdValue\": 0,\r\n        \"tokens\": {\r\n            \"channel\": \"CHANNEL-A\"\r\n        },  \r\n        \"occurrenceTime\": \"{{currentTime}}\",\r\n        \"targetUsers\": [\r\n            \"19a9a334-456f-4373-b8a3-ce9cf969a74a\",\r\n            \"102bc7a1-3724-4e10-a5d8-8a40286e6be4\"\r\n            ]\r\n    }\r\n]"
+				},
+				"url": {
+					"raw": "https://{{Environment}}.scorpion.co/platform/slot01/nhub/v1/api/event/event-triggers",
+					"protocol": "https",
+					"host": [
+						"{{Environment}}",
+						"scorpion",
+						"co"
+					],
+					"path": [
+						"platform",
+						"slot01",
+						"nhub",
+						"v1",
+						"api",
+						"event",
+						"event-triggers"
+					]
+				},
+				"description": "https://dev.azure.com/UberDev/Platform/_wiki/wikis/Platform.wiki/147/NHub"
+			},
+			"response": []
+		},
+		{
+			"name": "DND Set",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "currentTime",
+			"value": ""
+		},
+		{
+			"key": "targetUsers",
+			"value": ""
+		},
+		{
+			"key": "body",
+			"value": ""
+		},
+		{
+			"key": "temp",
+			"value": ""
+		},
+		{
+			"key": "currentTime2",
+			"value": ""
+		},
+		{
+			"key": "oneMinuteFromNowTime",
+			"value": ""
+		}
+	]
+}
